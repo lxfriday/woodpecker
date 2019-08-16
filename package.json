@@ -1,0 +1,49 @@
+{
+  "name": "@mi/woodpecker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "前端标准化工具注入器",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/woodpecker.js"
+  },
+  "bin": {
+    "woodpecker": "./bin/woodpecker.js"
+  },
+  "keywords": [
+    "自动格式化",
+    "统一项目风格",
+    "自动注入"
+  ],
+  "author": "liuxing3",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "flyio": "^0.6.14",
+    "format-json": "^1.0.3"
+  }
+}
