@@ -1,6 +1,6 @@
 {
   "name": "@mi/woodpecker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "前端 eslint、prettier、commitlint、editorconfig 自动注入工具",
   "main": "index.js",
   "scripts": {
