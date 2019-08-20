@@ -13,6 +13,7 @@
     "no-console": "off",
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "array-callback-return": "off"
   }
 }
