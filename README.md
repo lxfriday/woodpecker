@@ -14,7 +14,7 @@
 ## 安装
 
 ```bash
-npm i -g @mi/woodpecker
+npm i -g @lxfriday/woodpecker
 ```
 
 ## 使用
