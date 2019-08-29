@@ -1,6 +1,7 @@
 {
   "name": "@lxfriday/woodpecker",
   "version": "1.0.2",
+  "homepage": "https://github.com/lxfriday/woodpecker",
   "description": "前端 eslint、prettier、commitlint、editorconfig 自动注入工具",
   "main": "index.js",
   "scripts": {
