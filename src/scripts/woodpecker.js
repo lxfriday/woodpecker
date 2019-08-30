@@ -39,8 +39,8 @@ const eslintQuestions = [
     message: '安装下列哪个 Eslint config？',
     type: 'list',
     choices: Object.keys(eslintSelectors).map(t => ({
-      name: eslintSelectors[t].config,
-      value: eslintSelectors[t].config,
+      name: t,
+      value: t,
     })),
   },
 ]

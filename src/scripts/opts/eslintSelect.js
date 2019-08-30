@@ -12,7 +12,7 @@ const selectors = {
     deps: ['@mi/eslint-config-mcfe-react-app', 'eslint-plugin-flowtype', 'eslint-plugin-import', 'eslint-plugin-jsx-a11y', 'eslint-plugin-react'],
   },
   'eslint-config-react-app': {
-    config: 'eslint-config-react-app',
+    config: 'react-app',
     deps: [
       'eslint-config-react-app',
       'eslint-plugin-flowtype',
