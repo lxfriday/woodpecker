@@ -45,10 +45,19 @@ const eslintQuestions = [
   },
 ]
 
+function notSelect() {
+  successLog('')
+  successLog('-> 没有选择注入选项，停止执行')
+  shell.exit(0)
+}
+
 ;(async () => {
-  successLog('-> 开始注入')
+  successLog('-> 开始执行')
   successLog('')
   const { features } = await inquirer.prompt(questions)
+  if (!features.length) {
+    notSelect()
+  }
   let eslintConfig = null
   if (features.includes('eslint')) {
     const { eslintFeat } = await inquirer.prompt(eslintQuestions)
