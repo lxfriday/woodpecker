@@ -90,7 +90,7 @@ function copyEditorCfg() {
 }
 
 function copyGitIgnore() {
-  shell.cp(`${tempDir}/gitignore/.gitignore`, cwd)
+  shell.cp(`${tempDir}/gitignore/_gitignore`, path.relative(cwd, '.gitignore'))
 }
 
 module.exports = {
