@@ -4,12 +4,13 @@
 
 Eslint、Prettier、Commitlint、Editorconfig、Gitignore 自动注入工具
 
-- prettier
-- eslint(多种 config 可选)
-- husky
-- lint-staged
-- commitlint (angular style 开源项目主流 commit 规范)
-- editorconfig
+- Prettier
+- Eslint(多种 config 可选)
+- Husky
+- Lint-staged
+- Commitlint (angular style 开源项目主流 commit 规范)
+- Editorconfig
+- Gitignore
 
 ## 安装
 
@@ -51,3 +52,18 @@ Eslint 可选项
   @mi/eslint-config-mcfe-react-app
   eslint-config-react-app
 ```
+
+## 注意
+
+**当 Prettier 和 Eslint 同时存在时，Eslint 规则会受到 Prettier 影响，Prettier 自动格式化时变更为 Pretiter 配置文件对应的格式**
+
+## 相关链接
+
+- [Prettier](https://prettier.io/)
+- [Prettier 配置项](https://prettier.io/docs/en/options.html)
+- [Eslint rules(中文)](https://cn.eslint.org/docs/rules/)
+- [Husky](https://github.com/typicode/husky)
+- [Lint-staged](https://github.com/okonet/lint-staged)
+- [Commitlint](https://github.com/conventional-changelog/commitlint)
+- [angular commit message: @commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular)
+- [阮一峰 Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
