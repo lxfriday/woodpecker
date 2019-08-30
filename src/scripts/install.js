@@ -2,7 +2,7 @@
  * 检查 yarn npm 并安装依赖
  */
 const shell = require('shelljs')
-const { successLog } = require('./util')
+const { successLog, errorLog } = require('./util')
 const {
   cfgFileInfo: { yarnLockFileExist, pkgLockFileExist },
 } = require('./path')
@@ -12,22 +12,22 @@ const yarnExist = !!shell.which('yarn')
 
 function install() {
   if (!npmExist && !yarnExist) {
-    shell.echo('please install node first')
+    errorLog('请先安装 NodeJS')
     shell.exit(1)
   }
 
   // 优先使用 yarn 安装依赖
-  if (yarnLockFileExist || (yarnExist && !pkgLockFileExist)) {
-    successLog('  🍉 yarn bin find, using yarn install')
-    successLog('  ✔️ yarn installing...')
+  if (yarnLockFileExist && yarnExist && !pkgLockFileExist) {
+    successLog('-> 找到 yarn.lock, 使用 yarn 安装依赖')
+    successLog('-> yarn install...')
     shell.exec('yarn install')
   } else {
-    successLog('  🍉 npm bin find, using npm install')
-    successLog('  ✔️ npm installing...')
+    successLog('-> npm install...')
     shell.exec('npm install')
   }
 
-  successLog('\r\n  ✔️ installing success, enjoying!!!')
+  successLog('')
+  successLog('-> 注入成功')
   shell.exit(0)
 }
 

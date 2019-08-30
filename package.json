@@ -1,8 +1,8 @@
 {
-  "name": "@lxfriday/woodpecker",
-  "version": "1.0.3",
-  "homepage": "https://github.com/lxfriday/woodpecker",
-  "description": "前端 eslint、prettier、commitlint、editorconfig 自动注入工具",
+  "name": "@mi/woodpecker",
+  "version": "2.0.1",
+  "homepage": "http://v9.git.n.xiaomi.com/liuxing3/woodpecker",
+  "description": "Eslint、Prettier、Commitlint、Editorconfig、GitIgnore 自动注入工具",
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/woodpecker.js",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-angular": "^8.1.0",
     "babel-eslint": "10.0.2",
     "eslint": "6.2.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -32,7 +32,8 @@
     "eslint-plugin-react": "^7.14.3",
     "husky": "3.0.4",
     "lint-staged": "^9.2.0",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "husky": {
     "hooks": {
@@ -50,6 +51,7 @@
   "dependencies": {
     "async": "^3.1.0",
     "chalk": "^2.4.2",
+    "commander": "^3.0.0",
     "flyio": "^0.6.14",
     "inquirer": "^6.5.1",
     "shelljs": "^0.8.3"

@@ -22,6 +22,8 @@ const cfgFileInfo = {
   yarnLockFileExist: false,
   pkgLockFileExist: false,
   editorFileExist: false,
+  gitIgnoreFileExist: false,
+  gitFolderExist: false,
 }
 
 files.forEach(file => {
@@ -33,18 +35,24 @@ files.forEach(file => {
     cfgFileInfo.eslintCfgExist = true
     cfgFileInfo.eslintCfgPath = path.resolve(cwd, file)
   }
-  if (/commitlint.config.js/.test(file)) {
+  if (/commitlint.config.js$/.test(file)) {
     cfgFileInfo.commitlintCfgExist = true
     cfgFileInfo.commitlintCfgPath = path.resolve(cwd, file)
   }
-  if (/yarn.lock/.test(file)) {
+  if (/yarn.lock$/.test(file)) {
     cfgFileInfo.yarnLockFileExist = true
   }
-  if (/package-lock.json/.test(file)) {
+  if (/package-lock.json$/.test(file)) {
     cfgFileInfo.pkgLockFileExist = true
   }
-  if (/.editorconfig/.test(file)) {
+  if (/.editorconfig$/.test(file)) {
     cfgFileInfo.editorFileExist = true
+  }
+  if (/.gitignore$/.test(file)) {
+    cfgFileInfo.gitIgnoreFileExist = true
+  }
+  if (/.git$/.test(file)) {
+    cfgFileInfo.gitFolderExist = true
   }
 })
 
@@ -56,12 +64,3 @@ module.exports = {
   cfgFileInfo,
   pkgJSONPath,
 }
-
-// { prettierCfgExist: true,
-//   prettierCfgPath: '/home/lxfriday/xiaomi/woodpecker/.prettierrc',
-//   eslintCfgExist: true,
-//   eslintCfgPath: '/home/lxfriday/xiaomi/woodpecker/.eslintrc',
-//   commitlintCfgExist: true,
-//   commitlintCfgPath: '/home/lxfriday/xiaomi/woodpecker/commitlint.config.js',
-//   yarnLockFileExist: true,
-//   pkgLockFileExist: false }

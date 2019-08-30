@@ -8,9 +8,9 @@ function injectCommitLintConfig() {
   // commitlint.config.js 存在则不做任何操作
   if (!cfgFileInfo.commitlintCfgExist) {
     copyCommitLintCfg()
-    successLog('  ✔️ commitlint.config.js copy from template')
+    successLog('-> commitlint.config.js 复制成功')
   } else {
-    successLog('  ✔️ commitlint.config.js exist, do not copy from template')
+    successLog('-> commitlint.config.js 已存在')
   }
 }
 

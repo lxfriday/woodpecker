@@ -8,9 +8,9 @@ function injectEditorConfig() {
   // .editorconfig 存在则不做任何操作
   if (!cfgFileInfo.editorFileExist) {
     copyEditorCfg()
-    successLog('  ✔️ .editorconfig copy from template')
+    successLog('-> .editorconfig 复制成功')
   } else {
-    successLog('  ✔️ .editorconfig exist, do not copy from template')
+    successLog('-> .editorconfig 已存在')
   }
 }
 

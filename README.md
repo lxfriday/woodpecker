@@ -8,7 +8,7 @@
 - eslint
 - husky
 - lint-staged
-- commitlint
+- commitlint (angular style 开源项目主流 commit 规范)
 - editorconfig
 
 ## 安装

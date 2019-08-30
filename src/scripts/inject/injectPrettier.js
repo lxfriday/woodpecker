@@ -8,9 +8,9 @@ function injectPrettier() {
   // .pretteirrc 存在则不做任何操作
   if (!cfgFileInfo.prettierCfgExist) {
     copyPrettierCfg()
-    successLog('  ✔️ .pretteirrc copy from template')
+    successLog('-> .prettierrc 复制成功')
   } else {
-    successLog('  ✔️ .pretteirrc exist, do not copy from template')
+    successLog('-> .prettierrc 已经存在，跳过复制')
   }
 
   // prettier eslint 插件
@@ -29,9 +29,7 @@ function injectPrettier() {
     }
 
     writeEslintCfg(newEslintCfg)
-    successLog('  ✔️ prettier in eslint enabled')
-  } else {
-    successLog('  ✔️ eslint config file not exist, prettier in eslint disabled')
+    successLog('-> Prettier 在 Eslint 中配置成功')
   }
 }
 
