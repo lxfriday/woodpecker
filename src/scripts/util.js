@@ -78,6 +78,11 @@ function copyEslintCfg() {
   shell.cp(`${tempDir}/eslint/.eslintrc`, cwd)
 }
 
+// 从模板复制 eslint  ignore 文件
+function copyEslintIgnore() {
+  shell.cp(`${tempDir}/eslint/.eslintignore`, cwd)
+}
+
 // 从模板复制 prettier 配置文件
 function copyPrettierCfg() {
   shell.cp(`${tempDir}/prettier/.prettierrc`, cwd)
@@ -115,6 +120,7 @@ module.exports = {
   copyEditorCfg,
   copyGitIgnore,
   copyEslintCfg,
+  copyEslintIgnore,
   copyCommitLintCfg,
   successLog,
   warnLog,

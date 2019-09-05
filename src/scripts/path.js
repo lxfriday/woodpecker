@@ -18,6 +18,7 @@ const cfgFileInfo = {
   prettierIgnoreExist: false,
   eslintCfgExist: false,
   eslintCfgPath: '',
+  eslintIgnoreExist: false,
   commitlintCfgExist: false,
   commitlintCfgPath: '',
   yarnLockFileExist: false,
@@ -38,6 +39,9 @@ files.forEach(file => {
   if (/.eslintrc(.json)?/.test(file)) {
     cfgFileInfo.eslintCfgExist = true
     cfgFileInfo.eslintCfgPath = path.resolve(cwd, file)
+  }
+  if (/.eslintignore$/.test(file)) {
+    cfgFileInfo.eslintIgnoreExist = true
   }
   if (/commitlint.config.js$/.test(file)) {
     cfgFileInfo.commitlintCfgExist = true
