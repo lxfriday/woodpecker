@@ -110,4 +110,5 @@ module.exports = {
   errorLog,
   getWoodpeckerVersion,
   printWoodpeckerVersion,
+  woodpeckerPkg,
 }

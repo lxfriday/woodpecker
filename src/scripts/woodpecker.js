@@ -5,6 +5,7 @@ const inquirer = require('inquirer')
 
 const { pkgJSONPath } = require('./path')
 const { writePkg, successLog, errorLog } = require('./util')
+const checkVersion = require('./upgrade/checkVersion')
 const inject = require('./inject')
 const install = require('./install')
 const deps = require('./deps')
@@ -52,6 +53,8 @@ function notSelect() {
 }
 
 ;(async () => {
+  await checkVersion()
+
   successLog('-> 开始执行')
   successLog('')
   const { features } = await inquirer.prompt(questions)

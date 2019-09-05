@@ -1,12 +1,6 @@
 {
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
   "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": "error",
@@ -15,5 +9,8 @@
     "no-param-reassign": "off",
     "consistent-return": "off",
     "array-callback-return": "off"
+  },
+  "env": {
+    "jest": true
   }
 }
