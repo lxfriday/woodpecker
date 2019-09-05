@@ -2,7 +2,7 @@
  * 注入 prettier 配置文件
  */
 const { cfgFileInfo } = require('../path')
-const { copyPrettierCfg, copyPrettierIgnore, successLog, readEslintCfg, writeEslintCfg } = require('../util')
+const { copyPrettierCfg, copyPrettierIgnore, successLog, readEslintCfg, writeEslintCfg, warnLog } = require('../util')
 
 function injectPrettier() {
   // .pretteirrc 存在则不做任何操作
@@ -14,9 +14,9 @@ function injectPrettier() {
   }
   if (!cfgFileInfo.prettierIgnoreExist) {
     copyPrettierIgnore()
-    successLog('-> .prettierignore 复制成功, 若有大量静态文件, 可配置在 .prettierignore, 忽略静态文件格式化')
+    warnLog('-> .prettierignore 复制成功, 请将编译生成的静态文件目录添加到 .prettierignore 中')
   } else {
-    successLog('-> .prettierignore 已经存在，跳过复制')
+    warnLog('-> .prettierignore 已经存在，跳过复制')
   }
 
   // prettier eslint 插件
