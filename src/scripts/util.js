@@ -12,6 +12,10 @@ function successLog(message) {
   console.log(chalk.green(message))
 }
 
+function warnLog(message) {
+  console.log(chalk.yellow(message))
+}
+
 function errorLog(message) {
   console.log(chalk.red(message))
 }
@@ -113,6 +117,7 @@ module.exports = {
   copyEslintCfg,
   copyCommitLintCfg,
   successLog,
+  warnLog,
   errorLog,
   getWoodpeckerVersion,
   printWoodpeckerVersion,
