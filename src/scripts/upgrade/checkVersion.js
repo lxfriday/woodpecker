@@ -14,7 +14,7 @@ async function latestVersion() {
       parseJson: true,
     })
     successLog(`-> 最新版本 v${version}`)
-    if (woodpeckerPkg.version !== version) {
+    if (woodpeckerPkg.version < version) {
       successLog(`-> 安装最新版本 npm i -g @mi/woodpecker@latest`)
     }
     successLog('')
