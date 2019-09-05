@@ -8,10 +8,27 @@ const eslintSelectors = require('../opts/eslintSelect')
 
 // 只在 .eslntrc 将要创建而且需要添加 prettier 的时候
 function generatePrettierEslint(eslintrc) {
+  let eslintExtends = []
+  if (eslintrc.extends) {
+    if (typeof eslintrc.extends === 'string') {
+      eslintExtends.push(eslintrc.extends)
+    } else {
+      eslintExtends = eslintrc.extends
+    }
+  }
+  let eslintPlugins = []
+  if (eslintrc.plugins) {
+    if (typeof eslintrc.plugins === 'string') {
+      eslintPlugins.push(eslintrc.plugins)
+    } else {
+      eslintPlugins = eslintrc.plugins
+    }
+  }
+
   const newEslintrc = {
     ...eslintrc,
-    extends: [...new Set([...eslintrc.extends, 'prettier', 'prettier/react'])],
-    plugins: [...new Set([...eslintrc.plugins, 'prettier'])],
+    extends: [...new Set([...eslintExtends, 'prettier', 'prettier/react'])],
+    plugins: [...new Set([...eslintPlugins, 'prettier'])],
     parser: 'babel-eslint',
     rules: {
       ...eslintrc.rules,
@@ -26,10 +43,18 @@ module.exports = (eslintConfig, processArgs) => {
   const targetCfg = eslintSelectors[eslintConfig]
   if (cfgFileInfo.eslintCfgExist) {
     const eslintCfg = readEslintCfg()
+    let eslintExtends = []
+    if (eslintCfg.extends) {
+      if (typeof eslintCfg.extends === 'string') {
+        eslintExtends.push(eslintCfg.extends)
+      } else {
+        eslintExtends = eslintCfg.extends
+      }
+    }
 
     const newEslintCfg = {
       ...eslintCfg,
-      extends: [...new Set([...eslintCfg.extends, targetCfg.config])],
+      extends: [...new Set([...eslintExtends, targetCfg.config])],
       parser: 'babel-eslint',
     }
     writeEslintCfg(newEslintCfg)

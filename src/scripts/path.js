@@ -15,6 +15,7 @@ const pkgJSONPath = path.resolve(cwd, 'package.json')
 const cfgFileInfo = {
   prettierCfgExist: false,
   prettierCfgPath: '',
+  prettierIgnoreExist: false,
   eslintCfgExist: false,
   eslintCfgPath: '',
   commitlintCfgExist: false,
@@ -30,6 +31,9 @@ files.forEach(file => {
   if (/.prettierrc(.json)?/.test(file)) {
     cfgFileInfo.prettierCfgExist = true
     cfgFileInfo.prettierCfgPath = path.resolve(cwd, file)
+  }
+  if (/.prettierignore$/.test(file)) {
+    cfgFileInfo.prettierIgnoreExist = true
   }
   if (/.eslintrc(.json)?/.test(file)) {
     cfgFileInfo.eslintCfgExist = true

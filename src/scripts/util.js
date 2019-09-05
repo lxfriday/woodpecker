@@ -79,6 +79,11 @@ function copyPrettierCfg() {
   shell.cp(`${tempDir}/prettier/.prettierrc`, cwd)
 }
 
+// 从模板复制 prettier ignore 文件
+function copyPrettierIgnore() {
+  shell.cp(`${tempDir}/prettier/.prettierignore`, cwd)
+}
+
 // 从模板复制 commitlint 配置文件
 function copyCommitLintCfg() {
   shell.cp(`${tempDir}/commitlint/commitlint.config.js`, cwd)
@@ -102,6 +107,7 @@ module.exports = {
   readPrettierCfg,
   writePrettierCfg,
   copyPrettierCfg,
+  copyPrettierIgnore,
   copyEditorCfg,
   copyGitIgnore,
   copyEslintCfg,
