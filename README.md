@@ -2,6 +2,10 @@
 
 <p text-align=center><img src="./woodpecker.jpeg"></p>
 
+详细说明请看 wiki[https://wiki.n.miui.com/pages/viewpage.action?pageId=194334369](https://wiki.n.miui.com/pages/viewpage.action?pageId=194334369)
+
+---
+
 Eslint、Prettier、Commitlint、Editorconfig、Gitignore 自动注入工具
 
 - Prettier
