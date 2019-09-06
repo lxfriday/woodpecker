@@ -28,7 +28,6 @@ function install() {
 
   successLog('')
   successLog('-> 注入成功')
-  shell.exit(0)
 }
 
 module.exports = install

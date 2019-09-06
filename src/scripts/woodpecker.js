@@ -10,6 +10,7 @@ const inject = require('./inject')
 const install = require('./install')
 const deps = require('./deps')
 const makePkg = require('./makePkg')
+const doc = require('./doc')
 const eslintSelectors = require('./opts/eslintSelect')
 
 // package.json 文件不存在的时候提醒必须初始化项目
@@ -54,7 +55,6 @@ function notSelect() {
 
 ;(async () => {
   await checkVersion()
-
   successLog('-> 开始执行')
   successLog('')
   const { features } = await inquirer.prompt(questions)
@@ -82,4 +82,6 @@ function notSelect() {
   } else {
     successLog('不需要安装依赖，注入成功')
   }
+  doc()
+  shell.exit(0)
 })()
