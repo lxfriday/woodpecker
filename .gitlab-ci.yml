@@ -2,12 +2,11 @@ stages:
   - lint
 
 before_script:
-  - git fetch --all
   - npm install
 
-lint:
+lint_code:
   stage: lint
   script:
     - npm run lint
-  only
+  only:
     - master
