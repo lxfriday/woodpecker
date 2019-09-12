@@ -2,6 +2,8 @@
 
 <p text-align=center><img src="./woodpecker.jpeg"></p>
 
+[![cnpm version](http://npm.pt.mi.com/badge/v/@mi/woodpecker.svg?style=flat-square)](http://npm.pt.mi.com/package/@mi/woodpecker)
+
 详细说明请看 wiki[https://wiki.n.miui.com/pages/viewpage.action?pageId=194334369](https://wiki.n.miui.com/pages/viewpage.action?pageId=194334369)
 
 ---
