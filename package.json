@@ -10,9 +10,7 @@
     "test": "jest"
   },
   "bin": {
-    "woodpecker": "./bin/woodpecker.js",
-    "woodpecker-format": "./bin/woodpecker-format",
-    "woodpecker-inject": "./bin/woodpecker-inject"
+    "woodpecker": "./bin/woodpecker.js"
   },
   "keywords": [
     "自动格式化",
