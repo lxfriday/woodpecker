@@ -4,6 +4,7 @@
 const shell = require('shelljs')
 const chalk = require('chalk')
 const fs = require('fs')
+const os = require('os')
 const path = require('path')
 const { pkgJSONPath, cfgFileInfo, cwd, tempDir } = require('./path')
 const woodpeckerPkg = require('../../package.json')
@@ -107,6 +108,10 @@ function copyGitIgnore() {
   shell.cp(`${tempDir}/gitignore/_gitignore`, path.relative(cwd, '.gitignore'))
 }
 
+function getPlatform() {
+  return os.platform()
+}
+
 module.exports = {
   readPkg,
   writePkg,
@@ -128,4 +133,5 @@ module.exports = {
   getWoodpeckerVersion,
   printWoodpeckerVersion,
   woodpeckerPkg,
+  getPlatform,
 }

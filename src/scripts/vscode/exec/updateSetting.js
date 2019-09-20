@@ -1,7 +1,7 @@
 /**
  * 修改 VSC  配置项
  */
-const { successLog, warnLog, errorLog } = require('../../util')
+const { successLog, warnLog, errorLog, getPlatform } = require('../../util')
 const { readVSCSettings, writeVSCSettings } = require('../util/util')
 
 // prettier format 相关的配置项目
@@ -13,6 +13,7 @@ const prettierFormatConfig = {
 
 function updateSettings() {
   successLog('VSCode 注入开始 -------------')
+  successLog(`操作系统 ${getPlatform()}`)
   successLog('-> 开始配置 VSCode settings.json 文件')
   successLog('-> 注入配置项: ')
   warnLog(`  'editor.formatOnSave': true,`)
