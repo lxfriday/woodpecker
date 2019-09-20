@@ -1,6 +1,6 @@
 {
   "name": "@mi/woodpecker",
-  "version": "2.4.7",
+  "version": "2.4.8",
   "homepage": "http://v9.git.n.xiaomi.com/liuxing3/woodpecker",
   "description": "Eslint、Prettier、Commitlint、Editorconfig、GitIgnore 自动注入工具",
   "main": "index.js",
