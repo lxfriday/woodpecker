@@ -26,13 +26,9 @@ npm i -g @mi/woodpecker
 
 ## 使用
 
-输入 `woodpecker i`。
+### `woodpecker i`
 
-```bash
-woodpecker i
-```
-
-## 选择注入选项
+选择注入选项
 
 点击 `a` 自动选中全部功能， 点空格选择或者取消选择单个功能。选好之后回车自动开始安装
 
@@ -57,6 +53,18 @@ Eslint 可选项
 > airbnb
   @mi/eslint-config-mcfe-react-app
   eslint-config-react-app
+```
+
+### `woodpecker f`
+
+自动配置 vscode
+
+将会对用户的 settings.json 配置文件进行更改，如下，[**需要预先安装 Prettier 插件**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+```
+  "editor.formatOnSave": true, // 保存时 format
+  "editor.formatOnPaste": true, // 粘贴时 format
+  "editor.defaultFormatter": "esbenp.prettier-vscode" // 设置默认的 formatter 为 prettier
 ```
 
 ## 注意
