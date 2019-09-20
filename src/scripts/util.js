@@ -63,7 +63,11 @@ function readWoodpeckerEslintCfg() {
 }
 
 function writeEslintCfg(newEslintCfg) {
-  fs.writeFileSync(path.resolve(cwd, './.eslintrc'), JSON.stringify(newEslintCfg, null, 2))
+  if (cfgFileInfo.eslintCfgExist) {
+    fs.writeFileSync(cfgFileInfo.eslintCfgPath, JSON.stringify(newEslintCfg, null, 2))
+  } else {
+    fs.writeFileSync(path.resolve(cwd, './.eslintrc'), JSON.stringify(newEslintCfg, null, 2))
+  }
 }
 
 function readPrettierCfg() {
