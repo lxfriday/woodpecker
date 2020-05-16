@@ -2,8 +2,6 @@
 
 <p text-align=center><img src="./woodpecker.jpeg"></p>
 
-[![cnpm version](http://npm.pt.mi.com/badge/v/@mi/woodpecker.svg?style=flat-square)](http://npm.pt.mi.com/package/@mi/woodpecker) [![download](http://npm.pt.mi.com/badge/d/@mi/woodpecker.svg)](http://npm.pt.mi.com/package/@mi/woodpecker)
-
 详细说明请看 wiki[https://wiki.n.miui.com/pages/viewpage.action?pageId=194334369](https://wiki.n.miui.com/pages/viewpage.action?pageId=194334369)
 
 ---
@@ -21,7 +19,7 @@ Eslint、Prettier、Commitlint、Editorconfig、Gitignore 自动注入工具
 ## 安装
 
 ```bash
-npm i -g @mi/woodpecker
+npm i -g @lxfriday/woodpecker
 ```
 
 ## 使用
@@ -51,7 +49,6 @@ Eslint 可选项
 ```bash
 ? 安装下列哪个 Eslint config？ (Use arrow keys)
 > airbnb
-  @mi/eslint-config-mcfe-react-app
   eslint-config-react-app
 ```
 

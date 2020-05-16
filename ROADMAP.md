@@ -13,7 +13,6 @@
 
 - [ x ] 添加 version
 - [ x ] 添加 .gitignore
-- [ x ] eslint 添加多种 config @mi/eslint-config-mcfe-react-app、airbnb、react-app
 - [] 对新项目应该如何使用
 - [] 对成熟项目应该如何使用
 - [] 加入各个插件的官方文档

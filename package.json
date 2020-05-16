@@ -1,7 +1,8 @@
 {
-  "name": "@mi/woodpecker",
+  "name": "@lxfriday/woodpecker",
   "version": "2.5.0",
-  "homepage": "http://v9.git.n.xiaomi.com/liuxing3/woodpecker",
+  "homepage": "https://github.com/lxfriday/woodpecker",
+  "mail": "liu3248184446@outlook.com",
   "description": "Eslint、Prettier、Commitlint、Editorconfig、GitIgnore 自动注入工具",
   "main": "index.js",
   "scripts": {
@@ -17,24 +18,28 @@
     "统一项目风格",
     "自动注入"
   ],
-  "author": "liuxing3",
+  "author": "lxfriday",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-angular": "^8.1.0",
-    "babel-eslint": "10.0.2",
-    "eslint": "6.2.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "6.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "3.0.4",
-    "lint-staged": "^9.2.0",
-    "prettier": "1.18.2",
-    "jest": "^24.9.0"
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "jest": "^24.9.0",
+    "eslint-plugin-flowtype": "^5.0.3",
+    "eslint-config-react-app": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0"
   },
   "husky": {
     "hooks": {

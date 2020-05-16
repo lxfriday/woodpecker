@@ -9,18 +9,18 @@ async function latestVersion() {
   try {
     const {
       data: { version },
-    } = await fly.request(`http://registry.npm.pt.mi.com/${woodpeckerPkg.name}/latest`, null, {
+    } = await fly.request(`http://registry.npm.taobao.org/${woodpeckerPkg.name}/latest`, null, {
       responseType: 'json',
       parseJson: true,
     })
     successLog(`-> 最新版本 v${version}`)
     if (woodpeckerPkg.version < version) {
-      successLog(`-> 安装最新版本 npm i -g @mi/woodpecker@latest`)
+      successLog(`-> 安装最新版本 npm i -g @lxfriday/woodpecker@latest`)
     }
     successLog('')
     return version
   } catch (e) {
-    errorLog('\n-> 获取 @mi/woodpecker 版本信息失败')
+    errorLog('\n-> 获取 @lxfriday/woodpecker 版本信息失败')
   }
 }
 
