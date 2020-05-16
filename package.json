@@ -1,6 +1,6 @@
 {
   "name": "@lxfriday/woodpecker",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "homepage": "https://github.com/lxfriday/woodpecker",
   "mail": "liu3248184446@outlook.com",
   "description": "Eslint、Prettier、Commitlint、Editorconfig、GitIgnore 自动注入工具",
